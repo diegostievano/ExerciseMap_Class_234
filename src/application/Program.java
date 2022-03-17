@@ -4,12 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
-
-import entities.Votes;
 
 public class Program {
 
@@ -31,9 +27,7 @@ public class Program {
 				String[] fields = line.split(",");
 				
 				String name = fields[0];
-				int amount = Integer.parseInt(fields[1]);
-				
-				//Votes votes = new Votes(name, amount);				
+				int amount = Integer.parseInt(fields[1]);			
 
 				if (candidates.containsKey(name)) {
 					int newAmount = candidates.get(name) + amount;
